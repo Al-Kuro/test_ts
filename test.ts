@@ -1,3 +1,5 @@
+// 1-е тестовое задание.
+
 abstract class AClass {
   numbers: number[] = [];
 
@@ -46,3 +48,36 @@ console.log(class1.sort());
 
 const class2 = new Class2(6);
 console.log(class2.sort());
+
+// 2-тестовое задание, Sql.
+
+/*
+  SELECT 
+    Students.FirstName,
+    Students.LastName,
+    COUNT (Exams.Result)
+  FROM
+    Students JOIN Exams ON Students.StudentId = Exams.StudentId
+  WHERE
+    Exam.Result < 3
+  GROUP BY
+    Students.FirstName,
+    Students.LastName
+  HAVING 
+    COUNT (Exams.Result) > 2
+
+  
+  SELECT 
+    Students.Group,
+    COUNT (Exams.Result),
+    COUNT (Exams.StudentId)
+  FROM
+    Students JOIN Exams ON Students.StudentId = Exams.StudentId
+  WHERE
+    Exam.Result < 3
+  GROUP BY
+    Students.Group,
+  HAVING 
+    COUNT (Exams.Result) > 2
+    AND COUNT (Exams.StudentId) > 10
+*/
